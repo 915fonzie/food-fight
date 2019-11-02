@@ -1,15 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FoodFight</title>
+<style>
+body
+{margin:0; padding:0; color:#303030; background:#fafafa url(img/bodybg.gif) top left repeat-y; font:76% Verdana,Tahoma,sans-serif;}
+
+ul
+{list-style:circle; margin:15px 0 20px 0; font-size:0.9em;}
+
+li
+{margin:0 0 8px 25px;}
+
+a
+{color:#A1B449; font-weight:bold; text-decoration:none;}
+
+a:hover
+{color:#505050; text-decoration:underline;}
+
+img
+{float:left; margin:0 15px 15px 0; padding:1px; background:#ffffff; border:1px solid #d0d0d0;}
+
+a img
+{border-color:#A1B449;}
+
+a img:hover
+{background:#A1B449; border-color:#A1B449;}
+
+</style>
+    <title><%= yield :title %></title>
+    <h1><%= yield :title %></h1>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <div>
+     <h3><a href="welcome">Home </a><a href="about">About </a><a href="instructions">Instructions </a><a href="fight">Fight</a></h3>
+  </div>
 
   <body>
     <%= yield %>
   </body>
+  <p>This was created by Shawn and Fonzie</p>
 </html>

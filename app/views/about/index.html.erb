@@ -1,1 +1,16 @@
-<h1>Welcome to the About Page!</h1>
+<% provide(:title, "About") %>
+<p>
+    This game was created for the intent of learning how to incorporate Rails into a website.<br>
+Shawn was the one to come up with the idea of the actual website and then We both worked together<br>
+to see what would be incporated in it. As for the functionality of the website,<br>
+the user is intended to be able to navigate through several subdomains, and in one of those domains,<br>
+which is called /fight, is where you actually play the game that has been created.<br>
+<br>
+The way that /fight is structured, we have a local database of recipes and ingredients. Recipes and ingredients<br>
+have a many to many relationship where as the bad guy, or "baddie" and the fight itself is a many to one relationship.<br>
+When the user inputs what ingredients they think can make a recipe, the model for fight will in turn, check if <br>
+it is either a recipe or not and will update the health of the baddie in relation to the damage value of that recipe.<br>
+Everytime you enter a set of ingredients, the webpage will update accordingly until the point where the baddie has no<br>
+more health where the wepage will take you to a subdomain, /fight/win, which shows that the user has won and if<br>
+they would like to play again.
+</p>
